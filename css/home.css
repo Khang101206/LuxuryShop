@@ -1,0 +1,160 @@
+.event{
+    height: 60rem;
+    margin: 2rem 16rem;
+}
+
+.text{
+    font-size: 3rem;
+    color:#3e3e3e;
+    font-family: 'Roboto', sans-serif;
+}
+
+.slider-item_event{
+    display: grid!important;
+    grid-template-columns: 1fr 1fr;
+}
+
+  .slider-item_event img {
+    width: 99.9%;
+}
+
+:root {
+    --slide-1: url(/img/event1.png) ;
+    --slide-2: url(/img/event2.png) ;
+    --slide-3: url(/img/event3.png) ;
+}
+
+.slider-item_event p{
+    background-image: var(--slide-1);
+    filter: brightness(0.5);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 25px;
+    padding: 6px 12px 12px 0;
+    font-weight: bold;
+    text-align: justify;
+}
+
+
+.slick-list {
+	overflow: unset;
+	width: 100%;
+	height: 100%;
+}  
+
+.sliderContainer {
+	position: relative;
+}
+  
+.slider {
+	width: 100%;
+	overflow: hidden;
+}
+  
+.slick-slide{
+	padding: 8rem 0 2.8rem;
+	font-size: 30px;
+	font-family: "Arial", "Helvetica";
+	text-align: center;
+}
+  
+  slick-prev:before,
+.slick-next:before {
+	color: black;
+}
+
+  
+.progressBarContainer {
+	  position: absolute;
+	  bottom: 20px;
+	  width: 100%;
+	  left: 0;
+	  right: 0;
+	  margin: 0 auto;
+}
+  
+.progressBarContainer div {
+	display: block;
+	width: 33%;
+	padding: 0;
+	cursor: pointer;
+	margin-right: 6px;
+	float: left;
+	color: white;
+}
+  
+.progressBarContainer div:last-child {
+	margin-right: 0;
+}
+  
+.progressBarContainer div span.progressBar {
+	width: 100%;
+	height: 4px;
+	background-color: rgba(200, 200, 200, 0.5);
+	display: block;
+}
+  
+.progressBarContainer div span.progressBar .inProgress {
+	background-color: #a97854;
+	width: 0%;
+	height: 4px;
+}
+  
+@keyframes progress {
+	from { width: 0px;}
+	to {width: 80px;}
+}
+
+.brand_home-page{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 2rem;
+	width: auto;
+	height: auto;
+	margin: 0 16rem;
+}
+
+.brand-item_home-page {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.brand-item_home-page p {
+	text-align: center;
+	color: #fff;
+	font-size: 2.4rem;
+	transform: translateY(-4rem);
+}
+
+.brand-item_home-page img{
+	width: 100%;
+	height: auto;
+}
+
+.our-partner{
+	display: flex;
+	align-items: center;
+	height: 30rem;
+    width: 100%;
+    padding: 0 16rem;
+
+}
+
+.our-partner-item {
+	width: 25%;
+    display: flex;
+    justify-content: center ;
+}
+
+.our-partner-item img{
+	width: 25rem;
+	height: 50%;
+}
+
+.our-partner_text{
+    padding-left:16rem ;
+}
+
+.menu-box{
+	display: none;
+}

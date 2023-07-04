@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <main style="padding: 0;" class="order">
+        <div class="shipping-and-payment">
+            <div class="shipping-and-payment_logo">
+                <div class="logo"><img style="width: 7rem;" src="img/logo.svg"></div>
+                <div class="name-store"><p >Luxury Store</p></div>
+            </div>
+            <div class="shipping-information_form">
+                <div class="shipping-information">
+                    <div></div>
+                    <div><p>Shipping information</p></div>
+                    <div></div>
+                </div>
+                <div class="input-form">
+                    <div class="user-info_form">
+                        <div class="user-name user-info">
+                            <div>
+                                <p>Full name</p>
+                                <input class="input-name" type="text" name="Fullname">
+                                <p class="invalid invalid-name"></p>
+                            </div>
+                        </div>
+                        <div class="user-phone user-info">
+                            <p>Phone</p>
+                            <input class="input-phone" type="text" id="input-item">
+                            <p class="invalid invalid-phone"></p>
+                        </div>
+                        <div class="user-address user-info">
+                            <p>Address</p>
+                            <input class="input-address" type="text" id="input-item">
+                            <p class="invalid invalid-address"></p>
+                        </div>
+                        <div class="user-email user-info">
+                            <p>Email (optional)</p>
+                            <input type="email" id="input-item">
+                        </div>
+                        <div class="user-note user-info">
+                            <p>Note (optional)</p>
+                            <input type="text" id="input-item" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="and">
+                <div></div>
+                <div><p>And</p></div>
+                <div></div>
+            </div>
+            <div class="user-payment-method_form">
+                <div class="payment-method_form">
+                    <div id="method"><div>Payment method</div></div>
+                    <div class="payment-method cash">
+                        <a id="tick"><div id="selected"></div></a>
+                        <div>Cash on delivery</div>
+                    </div>
+                    <div class="payment-method">
+                        <a id="tick"><div></div></a>
+                        <div>Pay on delivery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="complete-order">
+            <div class="order-summary"><p>Order summary</p></div>
+            <div class="product-list_order-summary order-summary_section">
+                <table>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="discount-code order-summary_section">
+                <div>
+                    <input type="text" placeholder="Discount">
+                    <button type="button" class="apply-discount_button">Apply</button>
+                </div>
+            </div>
+            <div class="total-line order-summary_section">
+                <table class="total-line_table">
+                    <tbody>
+                        <tr>
+                            <th><p>Subtotal</p></th>
+                            <td class="subtotal"></td>
+                        </tr>
+                        <tr>
+                            <th><p>Shipping</p></th>
+                            <td class="shipping-fee">$5</td>
+                        </tr>
+                        <tr class="line"></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th><p>Total</p><p class="total-payment_checkout"></p></th>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="order-summary__nav">
+                    <div class="return_button">
+                        <a href="cart.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                        </svg>
+                      </a>
+                      <a href="cart.html">Return to cart</a></div>
+                    <a class="complete-order_button" style="font-size: 1.7rem;"><p>Complete order</p></a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/checkout.js"></script>
+</html>
