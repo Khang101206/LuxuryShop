@@ -28,7 +28,6 @@
     background-image: var(--slide-1);
     filter: brightness(0.5);
     -webkit-background-clip: text;
-    color: #000;
     font-size: 25px;
     padding: 6px 12px 12px 0;
     font-weight: bold;
