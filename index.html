@@ -10,9 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      />
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/filter.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -68,7 +74,7 @@
             <div class="search">
                 <div class="search-input">
                     <input class="search-header" type="text" placeholder="Search...">
-                    <div class="products-search">
+                    <div class="products-search hide">
                         <!-- <a class="search-item">
                             <img src="watchesImg/cartier(1).png" alt="">
                             <p>Hublot Classic Fusion Ceramic Blue Chronograph 42mm 541.CM.7170.RX</p>
@@ -86,8 +92,8 @@
                 <li class="menu-box-item menu-box-item-list menu-box-category-list">
                     <a>CATEGORY</a>
                     <ul class="category-list">   
-                        <li class>
-                            <a href="brand.html?category=All">All</a>
+                        <li>
+                            <a style="width: 700px;" href="brand.html?category=All">All</a>
                         </li> 
                     </ul>
                 </li>
@@ -114,100 +120,99 @@
             </ul>
         </div>
     </header>
-    <main>
-        <div class="filter-button_div">
-            <button class="filter-button">
-                <p>Filter</p>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"></path>
-                </svg>
-            </button>
-        </div>
-        <div class="filter-box">
-            <div class="category_filter select_filter">
-                <div class="category_filter_text">Category</div>
-                <div class="category select-item_filter">
-                    <a class="btn btn-primary"><p>Used</p></a>
-                    <a class="btn btn-primary"><p>New</p></a>
-                    <a class="btn btn-primary active"><p>All</p></a>
-                </div>
-            </div>
-            <div class="range-slider range-slider_price">
-                <div class="price-range">Price</div>
-                <input class="range-slider__range" type="range" step="100" min="0" max="90000" value="90000"></input>
-                <div class="range-slider__value">90000 $</div>
-            </div>
-            <div class="range-slider range-slider_size">
-                <div class="size-range">Size</div>
-                <input class="range-slider__range" type="range" min="24" max="56" value="56"></input>
-                <div class="range-slider__value">56 mm</div>
-            </div>
-            <div class="brand_filter select_filter">
-                <div>Brand</div>
-                <div class="brand-item_filter select-item_filter">
-                    <a class="btn btn-primary">
-                        <p>Rolex</p>
-                    </a>
-                    <a class="btn btn-primary">
-                        <p>Hublot</p>
-                    </a>
-                    <a class="btn btn-primary">
-                        <p>Cartier</p>
-                    </a>
-                    <a class="btn btn-primary">
-                        <p>Jacob & Co</p>
-                    </a>
-                    <a class="btn btn-primary">
-                        <p>Piaget</p>
-                    </a>
-                    <a class="btn btn-primary">
-                        <p>Chopard</p>
-                    </a>
-                    <a class="btn btn-primary">
-                        <p>Omega</p>
-                    </a>
-                    <a class="btn btn-primary">
-                        <p>Patek Philippe</p>
-                    </a>
-                    <a class="btn btn-primary active">
-                        <p>All</p>
-                    </a>
-                </div>
-            </div>
-            <div class="material_filter select_filter">
-                <div>Material</div>
-                <div class="material-item_filter select-item_filter">
-                    <a class="btn btn-primary">
-                        <p>Titanium</p>
-                    </a>
-                    <a class="btn btn-primary">
-                        <p>Stainless steel</p>
-                    </a>
-                    <a class="btn btn-primary">
-                        <p>Gold</p>
-                    </a>
-                    <a class="btn btn-primary">
-                        <p>Platinum</p>
-                    </a>
-                    <a class="btn btn-primary">
-                        <p>Ceramic</p>
-                    </a>
-                    <a class="btn btn-primary">
-                        <p>Sapphire-crystal</p>
-                    </a>
-                    <a class="btn btn-primary active">
-                        <p>All</p>
-                    </a>
-                </div>
-            </div>
-            <div class="button_inside-filter">
-                <a class="cancel-button_filter"><p>Cancel</p></a>
-                <a class="apply-button_filter"><p>Apply</p></a>
+    <main style="padding: 0;">
+        <div class="home-page_vid">
+            <div class="home">
+                <video autoplay muted loop id="myVideo">
+                    <source type="video/mp4" src="img/vid.mp4">
+                </video>
             </div>
         </div>
-        <div class="main-content">
-            <!-- render porducts here -->
+        <div class="event">
+            <p class="text">Events</p>
+            <div class="event-slider">
+                <div class="sliderContainer">
+                    <div class="slider single-item">
+                        <div class="slider-item_event">
+                            <div class="event-title">
+                                <p>Jacob & Co. Bugatti Chiron Tourbillon Blue Titanium Watch Launching Event</p>
+                            </div>
+                            <div class="event-img">
+                                <img src="img/event1.png">
+                            </div>
+                        </div>
+                        <div class="slider-item_event">
+                            <div class="event-title">
+                                <p>Jacob & Co Fleurs De Jardin Rainbow watch in a private party night at Rose Villa</p>
+                            </div>
+                            <div class="event-img">
+                                <img src="img/event2.png">
+                            </div>
+                        </div>
+                        <div class="slider-item_event">
+                            <div class="event-title">
+                                <p>Hermle Vietnam Showroom at C-Space is officially launched</p>
+                            </div>
+                            <div class="event-img">
+                                <img src="img/event3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progressBarContainer">
+                      <div class="item">
+                        <span data-slick-index="0" class="progressBar"></span>
+                      </div>
+                      <div class="item">
+                        <span data-slick-index="1" class="progressBar"></span>
+                      </div>
+                      <div class="item">
+                        <span data-slick-index="2" class="progressBar"></span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
         </div>
+        <div class="brand_home-page">
+            <a class="brand-item_home-page" href="brand.html?brand=Chopard">
+                <img src="img/chopard.png">
+                 <p>Chopard</p>
+            </a>
+            <a class="brand-item_home-page" href="brand.html?brand=Hublot">
+                <img src="img/hublot.png">
+                 <p>Hublot</p>
+            </a>
+            <a class="brand-item_home-page" href="brand.html?brand=Omega">
+                <img src="img/Omega.png">
+                 <p>Omega</p>
+            </a>
+            <a class="brand-item_home-page" href="brand.html?brand=Rolex">
+                <img src="img/rolex.png">
+                 <p>Rolex</p>
+            </a>
+            <a class="brand-item_home-page" href="brand.html?brand=Jacob%20&%20Co">
+                <img src="img/JacobAndCo.png">
+                 <p>Jacob & Co</p>
+            </a>
+            <a class="brand-item_home-page" href="brand.html?brand=Patek%20Philippe">
+                <img src="img/patek.png">
+                 <p>Patek Philippe</p>
+            </a>
+        </div>
+        <div class="new-arrivals">
+            
+        </div>
+        <div class="our-partner_home-page">
+            <div class="our-partner_text">
+                <p class="text">Our partner</p>
+            </div>
+            <div class="our-partner">
+                <div class="our-partner-item"><img src="img/doitac_image_1.png"></div>
+                <div class="our-partner-item"><img src="img/doitac_image_2.png"></div>
+                <div class="our-partner-item"><img src="img/doitac_image_3.png"></div>
+                <div class="our-partner-item"><img src="img/doitac_image_4.png"></div>
+            </div>
+        </div>
+
     </main>
     <footer>
         <div class="footer-menu">
@@ -268,10 +273,20 @@
             </div>
         </div>
     </footer>
-    <script src="./js/range.js"></script>
+    <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-1.11.0.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
+    <script src="/js/home.js"></script>
     <script type="module" src="./js/search.js"></script>
-    <script type="module" src="./js/brand.js"></script>
-    <script type="module" src="./js/filter.js"></script>
-    <script type="module" src="./js/main.js"></script>
+    <script  type="module" src="./js/main.js"></script>
 </body>
 </html>
